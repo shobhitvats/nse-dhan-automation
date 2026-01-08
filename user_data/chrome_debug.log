@@ -1,0 +1,97 @@
+[5585:5585:0108/040217.052650:WARNING:ui/ozone/platform/wayland/common/drm_render_node_path_finder.cc:111] Preferred drm_render_node not found, picking nouveau
+[5585:5585:0108/040217.065262:WARNING:ui/ozone/platform/wayland/common/wayland_object.cc:119] Binding to zwp_pointer_gestures_v1 version 1 but version 3 is available.
+[5585:5585:0108/040217.065370:WARNING:ui/ozone/platform/wayland/common/wayland_object.cc:119] Binding to zwp_linux_dmabuf_v1 version 4 but version 5 is available.
+[5585:5585:0108/040217.281036:INFO:components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc:206] No machine level policy manager exists.
+[5585:5585:0108/040217.318242:WARNING:chrome/browser/extensions/extension_service.cc:407] --load-extension is not allowed in Google Chrome, ignoring.
+[5585:5585:0108/040217.345944:WARNING:ui/ozone/platform/wayland/host/wayland_surface.cc:170] Server doesn't support zcr_alpha_compositing_v1.
+[5585:5585:0108/040217.345984:WARNING:ui/ozone/platform/wayland/host/wayland_surface.cc:185] Server doesn't support overlay_prioritizer.
+[5585:5585:0108/040217.346000:WARNING:ui/ozone/platform/wayland/host/wayland_surface.cc:200] Server doesn't support wp_content_type_v1
+[5585:5585:0108/040217.346013:WARNING:ui/ozone/platform/wayland/host/wayland_surface.cc:214] Server doesn't support wp_color_management_surface_v1.
+[5636:5636:0108/040217.481791:WARNING:sandbox/policy/linux/sandbox_linux.cc:404] InitializeSandbox() called with multiple threads in process gpu-process.
+[5585:5585:0108/040218.045576:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.048229:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.084338:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.087558:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.089579:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.092877:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.096192:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.100575:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.104654:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.109445:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.121225:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.132393:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.138134:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.146470:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.149932:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.154447:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.159756:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.169224:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.184368:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040218.190146:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5618:0108/040222.769779:ERROR:google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
+[5585:5585:0108/040223.126633:INFO:CONSOLE:944] "37 custom indicators loaded.", source: https://tv.dhan.co/charting_library_v28.4.0/bundles/library.f2e613af8322ec849388.js (944)
+[5585:5585:0108/040224.305714:INFO:CONSOLE:0] "ResizeObserver loop completed with undelivered notifications.", source: blob:https://tv.dhan.co/25255b54-a769-4daf-8add-e1ff5335e36b (0)
+[5585:5585:0108/040224.891943:INFO:CONSOLE:172] "2026-01-07T22:32:24.891Z:ChartApi.PointsetsManager:Cannot get index of time: time=1762163580000, 1 -> 5S", source: https://tv.dhan.co/charting_library_v28.4.0/bundles/library.f2e613af8322ec849388.js (172)
+[5585:5585:0108/040226.275311:INFO:CONSOLE:172] "2026-01-07T22:32:26.275Z:ChartApi.PointsetsManager:Cannot get index of time: time=1762163580000, 1 -> 5S", source: https://tv.dhan.co/charting_library_v28.4.0/bundles/library.f2e613af8322ec849388.js (172)
+[5585:5585:0108/040226.963828:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040226.968722:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040226.973521:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040226.976988:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040226.980113:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040226.991577:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040226.996437:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040226.999490:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040227.003039:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040227.011776:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040227.022250:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040227.027838:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040227.037319:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040227.042021:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040227.050854:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040227.055510:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040227.059881:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040227.066108:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040227.077286:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5585:0108/040227.081960:INFO:CONSOLE:0] "Framing 'https://tv.dhan.co/' violates the following Content Security Policy directive: "frame-ancestors 'self'". The request has been blocked.
+", source:  (0)
+[5585:5618:0108/040249.430658:ERROR:google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
+[5585:5618:0108/040340.753958:ERROR:google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
