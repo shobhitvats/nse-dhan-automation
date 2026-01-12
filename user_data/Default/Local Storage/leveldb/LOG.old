@@ -1,5 +1,6 @@
-2026/01/12-19:03:05.969 5 Reusing MANIFEST /home/vats/Desktop/Trade_automation/nse-dhan-automation/user_data/Default/Local Storage/leveldb/MANIFEST-000001
-2026/01/12-19:03:05.974 5 Recovering log #32
-2026/01/12-19:03:05.974 5 Level-0 table #35: started
-2026/01/12-19:03:05.975 5 Level-0 table #35: 31297 bytes OK
-2026/01/12-19:03:05.977 5 Delete type=0 #32
+2026/01/13-02:10:45.336 5 Reusing MANIFEST /home/vats/Desktop/Trade_automation/nse-dhan-automation/user_data/Default/Local Storage/leveldb/MANIFEST-000001
+2026/01/13-02:10:45.340 5 Recovering log #64
+2026/01/13-02:10:45.340 5 Reusing old log /home/vats/Desktop/Trade_automation/nse-dhan-automation/user_data/Default/Local Storage/leveldb/000064.log 
+2026/01/13-02:12:45.879 7 Level-0 table #69: started
+2026/01/13-02:12:45.881 7 Level-0 table #69: 30222 bytes OK
+2026/01/13-02:12:45.882 7 Delete type=0 #64

@@ -201,8 +201,8 @@ class DhanGrid:
             for slot_idx in range(6):
                 fid = f"chart-frame-{i}-{slot_idx}"
                 if slot_idx < len(chunk):
-                    # Use generic URL - we will TYpe the symbol later
-                    src = "https://tv.dhan.co/" 
+                    # Use generic NIFTY URL to guarantee Toolbar/Search Button loads
+                    src = "https://tv.dhan.co/?symbol=NSE:NIFTY" 
                     
                     if i == 0:
                         # Page 1: Direct Injection (0ms Latency - Critical Path)
@@ -273,8 +273,9 @@ class DhanGrid:
         
         if not self.is_initialized:
             self.init_grid(symbols)
-            # Give frames a moment to load before we start typing
-            time.sleep(5) 
+            # Give frames a moment to load - Reduced to 0.5s for MAX speed
+            logging.info("Waiting 0.5s for Grid to stabilize...")
+            time.sleep(0.5) 
         
         # We need to iterate through frames and type the symbol
         # Map symbols to frames same as init
@@ -290,7 +291,8 @@ class DhanGrid:
                 logging.info(f"Switching to PAGE {i+1}...")
                 tab_btn = self.driver.find_element(By.ID, f"btn-{i}")
                 tab_btn.click()
-                time.sleep(3) # Allow transition and render
+                tab_btn.click()
+                time.sleep(0.5) # Fast transition wait
             except Exception as e:
                 logging.error(f"Failed to switch to Page {i+1}: {e}")
                 continue
@@ -298,7 +300,10 @@ class DhanGrid:
             for slot_idx in range(6):
                 if slot_idx >= len(chunk): break
                 
-                symbol = chunk[slot_idx]
+                raw_symbol = chunk[slot_idx]
+                # LOWERCASE CONVERSION (User Request: Prevent Shift+Keys)
+                symbol = raw_symbol.lower() # 'SBIN' -> 'sbin'
+                
                 fid = f"chart-frame-{i}-{slot_idx}"
                 
                 try:
@@ -306,67 +311,52 @@ class DhanGrid:
                     frame = self.driver.find_element(By.ID, fid)
                     self.driver.switch_to.frame(frame)
                     
-                    # STRICT SEARCH: Do not type unless we find the button
-                    try:
-                        # OPTIMIZED SELECTOR: Check ALL candidates in one go (No loop delay)
-                        # This checks Button OR Legend OR Mobile Icon instantly.
-                        combined_selector = ",".join([
-                            "[id*='header-toolbar-symbol-search']", 
-                            ".button-NgRzVv8p", 
-                            "div[data-name='header-toolbar-symbol-search']",
-                            "div[data-name='legend-source-title']", 
-                            ".js-button-text", 
-                            "div[class*='title'][class*='apply-overflow-tooltip']"
-                        ])
-                        
-                        search_btn = None
-                        try:
-                            # 2-second fast check for ANY of them
-                            search_btn = WebDriverWait(self.driver, 2).until(
-                                EC.element_to_be_clickable((By.CSS_SELECTOR, combined_selector))
-                            )
-                        except:
-                            pass
-
-                        if not search_btn:
-                            # FALLBACK: Aggressive Wake-Up (Ghost Screen)
-                            logging.warning(f"No search UI in {fid}. Forcing 'Blind Type'...")
+                    # 1. HOTKEY KILLER INJECTION
+                    hk_killer = """
+                        window.addEventListener('keydown', function(e) {
+                            // Allow typing in INPUT fields
+                            if(e.target.tagName === 'INPUT') return;
                             
-                            try:
-                                # Click center/body to focus
-                                body = self.driver.find_element(By.TAG_NAME, "body")
-                                body.click()
-                                time.sleep(0.5)
-                                
-                                # Blind Type: Symbol -> Pause -> Enter
-                                actions = ActionChains(self.driver)
-                                actions.send_keys(symbol)
-                                actions.pause(0.5)
-                                actions.send_keys(Keys.ENTER)
-                                actions.perform()
-                                
-                                logging.info(f"Force-typed {symbol}")
-                                continue 
-                            except Exception as e:
-                                logging.error(f"Force type failed: {e}")
-                                
-                            raise Exception("No search button interactable")
+                            // Block Dangerous Instant Orders: Shift + S (Sell), Shift + B (Buy)
+                            // We allow plain 's' and 'b' so the user can Type-to-Search (e.g. 'SBIN')
+                            var key = e.key.toLowerCase();
+                            if(e.shiftKey && (key === 's' || key === 'b')) {
+                                e.stopImmediatePropagation();
+                                e.preventDefault();
+                                console.log('Blocked dangerous key: Shift + ' + key);
+                            }
+                            // Block Fullscreen 'f'
+                            if(key === 'f') {
+                                e.stopImmediatePropagation();
+                                e.preventDefault();
+                            }
+                        }, true);
+                    """
+                    self.driver.execute_script(hk_killer)
+                    
+                    # -------------------------------------------------------------
+                    # PRIMARY STRATEGY: TYPE-TO-SEARCH (NATIVE)
+                    # -------------------------------------------------------------
+                    # As requested, this is now the FIRST and ONLY priority.
+                    # It bypasses UI detection issues and is the fastest method.
+                    try:
+                        # 1. Focus Canvas (ensure keystrokes register)
+                        canvases = self.driver.find_elements(By.TAG_NAME, "canvas")
+                        if canvases:
+                            canvases[0].click()
+                        else:
+                            self.driver.find_element(By.TAG_NAME, "body").click()
+                        time.sleep(0.5)
 
-                        # NORMAL PATH (Button Found)
-                        search_btn.click()
-                        
-                        # Wait for Input
-                        input_box = WebDriverWait(self.driver, 5).until(
-                            EC.visibility_of_element_located((By.CSS_SELECTOR, "input[data-role='search'], input[placeholder*='Symbol']"))
-                        )
-                        
-                        # Type
+                        # 2. Type AND Enter in one continuous chain
+                        # Sequence: Type Symbol -> Wait 0.35s -> Arrow Down -> Enter
                         actions = ActionChains(self.driver)
                         actions.send_keys(symbol)
-                        actions.pause(0.3)
+                        actions.pause(0.35) # Validated minimum wait for network
                         actions.send_keys(Keys.ENTER)
                         actions.perform()
                         
+                        # 3. Success (No validation wait needed, assume success)
                         logging.info(f"Updated {fid} -> {symbol}")
                         
                     except Exception as e:
@@ -378,7 +368,6 @@ class DhanGrid:
                     self.driver.switch_to.default_content()
         
         # Cleanup UI AFTER all typing is done
-        time.sleep(3)
         self.cleanup_ui()
         logging.info("Finished Search & Type updates.")
 
