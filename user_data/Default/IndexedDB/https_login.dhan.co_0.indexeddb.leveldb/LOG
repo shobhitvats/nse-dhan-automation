@@ -1,10 +1,24 @@
-2026/01/08-01:26:32.759 be53 Creating DB /home/ratul/Desktop/MFT/nse_dhan_automation/user_data/Default/IndexedDB/https_login.dhan.co_0.indexeddb.leveldb since it was missing.
-2026/01/08-01:26:32.763 be53 Reusing MANIFEST /home/ratul/Desktop/MFT/nse_dhan_automation/user_data/Default/IndexedDB/https_login.dhan.co_0.indexeddb.leveldb/MANIFEST-000001
-2026/01/08-01:26:32.815 be57 Level-0 table #5: started
-2026/01/08-01:26:32.816 be57 Level-0 table #5: 1262 bytes OK
-2026/01/08-01:26:32.817 be57 Delete type=0 #3
-2026/01/08-01:26:32.818 be53 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
-2026/01/08-01:26:32.969 be53 Level-0 table #7: started
-2026/01/08-01:26:32.971 be53 Level-0 table #7: 1021 bytes OK
-2026/01/08-01:26:32.973 be53 Delete type=0 #4
-2026/01/08-01:26:32.973 be53 Manual compaction at level-0 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/01/12-17:41:56.773 292ee Reusing MANIFEST /home/vats/Desktop/Trade_automation/nse-dhan-automation/user_data/Default/IndexedDB/https_login.dhan.co_0.indexeddb.leveldb/MANIFEST-000001
+2026/01/12-17:41:56.774 292ee Recovering log #6
+2026/01/12-17:41:56.774 292ee Reusing old log /home/vats/Desktop/Trade_automation/nse-dhan-automation/user_data/Default/IndexedDB/https_login.dhan.co_0.indexeddb.leveldb/000006.log 
+2026/01/12-17:41:56.899 292ed Level-0 table #10: started
+2026/01/12-17:41:56.900 292ed Level-0 table #10: 4412 bytes OK
+2026/01/12-17:41:56.901 292ed Delete type=0 #6
+2026/01/12-17:41:56.901 292ed Manual compaction at level-0 from '\x00\x06\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at '\x00\x06\x00\x00\x05' @ 227 : 1
+2026/01/12-17:41:56.901 292ed Compacting 1@0 + 1@1 files
+2026/01/12-17:41:56.902 292ed Generated table #11@0: 90 keys, 2642 bytes
+2026/01/12-17:41:56.902 292ed Compacted 1@0 + 1@1 files => 2642 bytes
+2026/01/12-17:41:56.903 292ed compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/01/12-17:41:56.904 292ed Delete type=2 #10
+2026/01/12-17:41:56.904 292ed Manual compaction at level-0 from '\x00\x06\x00\x00\x05' @ 227 : 1 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/01/12-17:41:56.964 292ef Level-0 table #13: started
+2026/01/12-17:41:56.965 292ef Level-0 table #13: 767 bytes OK
+2026/01/12-17:41:56.966 292ef Delete type=2 #7
+2026/01/12-17:41:56.966 292ef Delete type=0 #9
+2026/01/12-17:41:56.966 292ed Manual compaction at level-0 from '\x00\x07\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at '\x00\x07\x00\x00\x05' @ 260 : 1
+2026/01/12-17:41:56.966 292ed Compacting 1@0 + 1@1 files
+2026/01/12-17:41:56.967 292ed Generated table #14@0: 94 keys, 2558 bytes
+2026/01/12-17:41:56.967 292ed Compacted 1@0 + 1@1 files => 2558 bytes
+2026/01/12-17:41:56.968 292ed compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/01/12-17:41:56.968 292ed Delete type=2 #13
+2026/01/12-17:41:56.968 292ed Manual compaction at level-0 from '\x00\x07\x00\x00\x05' @ 260 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at (end)
